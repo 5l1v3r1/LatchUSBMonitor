@@ -1,0 +1,12 @@
+Latch USB Monitor is a tool that monitors Plug 'n Play device (PNP) changes in Windows and gives the user the possibility of tracking incoming devices, and react accordingly to a preconfigured Latch response. 
+
+How to add and configure a device
+
+Each monitored device, may have these fields:
+* Device (optional): If your device is currently plugged in, you can choose it from this dropdown menu where all attached devices are listed.
+* Description (optional): Giving a meaningful description of the device helps you better identify it in the main list.
+* Device Instance ID: The ID that uniquely identifies a device in a Windows machine. When an arriving Device Instance ID is detected it goes through a matching system that can be used to discard or allow the rule. If the string set matches, the Latch query will be launched. This is treated as a string, so "Starts with", "Contains"... may be used to match.
+* Operation ID: The operation ID used in Latch.
+* Actions.Open (optional): If the Latch query responds with an "on", the process specified here will be launched, with the specified argument set (optional). 
+* Actions.Closed (optional): If the Latch query responds with an "off", the process specified here will be launched, with the specified argument set (optional).
+* Actions.No response (optional): If the Latch query doesn't respond (because there's no connectivity, for instance, after the timeout declared in "Latch management"), the process specified here will be launched, with the specified argument set (optional). 
